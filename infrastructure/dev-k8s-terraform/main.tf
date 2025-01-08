@@ -106,7 +106,7 @@ resource "aws_instance" "worker-1" {
   instance_type = "t3a.medium"
   vpc_security_group_ids = [aws_security_group.k8s-sec-gr.id]
   key_name = "clarus"
-  subnet_id = "ssubnet-0ed5fc3e7cb682d7d"  # select own subnet_id of us-east-1a
+  subnet_id = "subnet-0ed5fc3e7cb682d7d"  # select own subnet_id of us-east-1a
   availability_zone = "us-east-1a"
   tags = {
     Name = "worker-1"
